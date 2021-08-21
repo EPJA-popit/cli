@@ -12,7 +12,12 @@ Simple command line interface for frontend developers
 
 1. Clone this repository
    ```sh
-   git clone https://github.com/KamilRizatdinov/devops.git
+   git clone https://github.com/EPJA-popit/cli.git
+   ```
+
+2. Run npm installation process
+   ```sh
+   npm i
    ```
 
 ## Testing
