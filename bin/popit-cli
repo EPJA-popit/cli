@@ -2,8 +2,19 @@
 const { program } = require("commander");
 const package = require("../package");
 
+// Version information
 program.version(package.version);
 
+// Initializing command options
 program
-  .option('--init', 'initialize your project')
-  .parse();
+  .option('--init', 'initialize your project');
+
+// Parse command options
+program.parse();
+
+const options = program.opts();
+
+// Handling command options
+if (options.init) {
+  require("child_process").execSync("npm install react", { stdio: 'inherit' });
+}

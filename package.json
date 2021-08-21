@@ -4,8 +4,9 @@
   "description": "Simple command line interface for frontend developers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "node ./bin/popit-cli --init",
+    "new:version": "npm publish --access public"
   },
   "bin": {
     "popit-cli": "bin/popit-cli"
