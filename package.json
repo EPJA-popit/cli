@@ -1,0 +1,27 @@
+{
+  "name": "@popit/cli",
+  "version": "1.0.0",
+  "description": "Simple command line interface for frontend developers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EPJA-popit/cli.git"
+  },
+  "author": "popit team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EPJA-popit/cli/issues"
+  },
+  "homepage": "https://github.com/EPJA-popit/cli#readme",
+  "devDependencies": {
+    "husky": "^7.0.0",
+    "pretty-quick": "^3.1.1"
+  },
+  "dependencies": {
+    "@types/node": "^16.7.1"
+  }
+}
