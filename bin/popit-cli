@@ -7,7 +7,8 @@ program.version(package.version);
 
 // Initializing command options
 program
-  .option('--init', 'initialize your project');
+  .option('--init', 'initialize your project')
+  .option('--server', 'initialize your dev server');
 
 // Parse command options
 program.parse();
@@ -17,4 +18,8 @@ const options = program.opts();
 // Handling command options
 if (options.init) {
   require("child_process").execSync("npm install react", { stdio: 'inherit' });
+}
+
+if (options.server) {
+  console.log(1111);
 }
