@@ -5,10 +5,16 @@ const package = require("../package");
 // Version information
 program.version(package.version);
 
+// Setting CLI usage
+program
+  .usage('[command] [options]')
+
 // Initializing command options
 program
   .option('--init', 'initialize your project')
-  .option('--server', 'initialize your dev server');
+  .option('--server', 'start your dev server')
+  .option('-P, --port <port>', 'specify port', 8000);
+  
 
 // Parse command options
 program.parse();
@@ -18,8 +24,22 @@ const options = program.opts();
 // Handling command options
 if (options.init) {
   require("child_process").execSync("npm install react", { stdio: 'inherit' });
+
+  const path = require('path');
+  const fs = require('fs');
+  const packagepath = path.resolve('package.json');
+  const package = require(packagepath);
+
+  package.scripts = package.scripts || {};
+  package.scripts.start = 'npx popit-cli --server';
+
+  console.log(package.scripts, { stdio: 'inherit' });
+
+  fs.writeFileSync(packagepath, JSON.stringify(package, null, 4));
+
 }
 
 if (options.server) {
-  console.log(1111);
+  const { startServer  } = require('@popit/dev-server');
+  startServer({ port: options.port });
 }
