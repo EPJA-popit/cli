@@ -6,11 +6,12 @@ Simple command line interface for frontend developers
 
 ## Prerequisites
 
-* [node v14+](https://nodejs.org/en/download/)
+- [node v14+](https://nodejs.org/en/download/)
 
 ## Instalation
 
 1. Clone this repository
+
    ```sh
    git clone https://github.com/EPJA-popit/cli.git
    ```
@@ -20,17 +21,18 @@ Simple command line interface for frontend developers
    npm i
    ```
 
-
 ## Versioning
 
 In order to create a new version of @popit/cli you should run this commands:
 
 1. Create a new verstion of package
+
    ```sh
    npm version < major | minor | patch >
    ```
 
 2. Publish this version of package, please be sure that you logged in under your npmjs.com account `npm login`
+
    ```sh
    npm publish --access public
    ```
@@ -38,7 +40,7 @@ In order to create a new version of @popit/cli you should run this commands:
 3. Push commits realted to package versioning into github repository
    ```sh
    git push
-   ``` 
+   ```
 
 ## Testing
 

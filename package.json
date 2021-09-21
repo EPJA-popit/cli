@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/EPJA-popit/cli#readme",
   "devDependencies": {
-    "husky": "^7.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "2.4.1",
     "pretty-quick": "^3.1.1"
   },
   "dependencies": {
@@ -31,5 +33,8 @@
     "@popit/templates": "^1.0.1",
     "@types/node": "^16.7.1",
     "commander": "^8.1.0"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
