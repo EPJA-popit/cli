@@ -28,9 +28,6 @@
     "pretty-quick": "^3.1.1"
   },
   "dependencies": {
-    "@popit/dev-server": "^1.1.0",
-    "@popit/fire.app": "^1.0.0",
-    "@popit/templates": "^1.0.1",
     "@types/node": "^16.7.1",
     "commander": "^8.1.0"
   },

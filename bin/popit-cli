@@ -21,25 +21,15 @@ program.parse();
 
 const options = program.opts();
 
+console.log("In local popit-cli")
+
 // Handling command options
 if (options.init) {
-  require("child_process").execSync("npm install react", { stdio: 'inherit' });
-
-  const path = require('path');
-  const fs = require('fs');
-  const packagepath = path.resolve('package.json');
-  const package = require(packagepath);
-
-  package.scripts = package.scripts || {};
-  package.scripts.start = 'npx popit-cli --server';
-
-  console.log(package.scripts, { stdio: 'inherit' });
-
-  fs.writeFileSync(packagepath, JSON.stringify(package, null, 4));
-
+  require("../src/init")(options)
 }
 
 if (options.server) {
+  // TODO: doesn't work locally, fix with Kamil. hard
   const { startServer  } = require('@popit/dev-server');
   startServer({ port: options.port });
 }
