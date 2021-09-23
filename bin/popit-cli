@@ -13,6 +13,8 @@ program
 program
   .option('--init', 'initialize your project')
   .option('--server', 'start your dev server')
+  .option('--build', 'build project')
+  .option('--prod', 'prodaction flag')
   .option('-P, --port <port>', 'specify port', 8000);
   
 
@@ -22,6 +24,10 @@ program.parse();
 const options = program.opts();
 
 console.log("In local popit-cli")
+
+if (options.build) {
+  require('../src/build')(options);
+}
 
 // Handling command options
 if (options.init) {
