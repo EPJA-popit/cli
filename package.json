@@ -29,6 +29,7 @@
     "webpack": "^5.53.0"
   },
   "dependencies": {
+    "@popit/dev-server": "^1.2.2",
     "@popit/webpack-config": "^1.1.0",
     "@types/node": "^16.7.1",
     "commander": "^8.1.0"
