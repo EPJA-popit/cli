@@ -1,5 +1,5 @@
 const init = (options) => {
-  const dependencies = ["react", "react-dom", "typescript"];
+  const dependencies = ["react", "react-dom", "typescript", "@popit/fire.app"];
   const devDependencies = [
     "@types/react",
     "@types/react-dom",
