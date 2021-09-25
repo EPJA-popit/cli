@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@popit/dev-server": "^1.2.3",
-    "@popit/webpack-config": "^1.1.1",
+    "@popit/webpack-config": "^1.1.2",
     "@types/node": "^16.7.1",
     "commander": "^8.1.0"
   },
