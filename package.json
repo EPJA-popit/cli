@@ -1,6 +1,6 @@
 {
   "name": "@popit/cli",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Simple command line interface for frontend developers",
   "main": "index.js",
   "scripts": {
